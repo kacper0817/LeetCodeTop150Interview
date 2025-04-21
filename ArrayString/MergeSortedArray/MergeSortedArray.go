@@ -1,21 +1,14 @@
-package arraystring
-
-func RunMergeSortedArray() {
-	nums1 := []int{1, 2, 3, 0, 0, 0}
-	nums2 := []int{2, 5, 6}
-
-	merge(nums1, 3, nums2, 3)
-}
+package mergesortedarray
 
 func merge(nums1 []int, m int, nums2 []int, n int) {
 	if m == 0 {
 		copy(nums1, nums2)
 	} else if n > 0 {
-		copy(nums1, handleMerge(nums1, m, nums2, n))
+		copy(nums1, mergeNotEmptyArrays(nums1, m, nums2, n))
 	}
 }
 
-func handleMerge(nums1 []int, m int, nums2 []int, n int) []int {
+func mergeNotEmptyArrays(nums1 []int, m int, nums2 []int, n int) []int {
 	temp := make([]int, m+n)
 	num1Index := 0
 	num2Index := 0
