@@ -1,7 +1,7 @@
 package removeduplicates
 
 func RunRemoveDuplicates() {
-	nums := []int{1, 1}
+	nums := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
 
 	removeDuplicates(nums)
 }
