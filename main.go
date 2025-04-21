@@ -1,7 +1,9 @@
 package main
 
-import removeduplicates "LeetCodeTop150Interview/ArrayString/RemoveDuplicates"
+import (
+	majorityelement "LeetCodeTop150Interview/ArrayString/MajorityElement"
+)
 
 func main() {
-	removeduplicates.RunRemoveDuplicates()
+	majorityelement.RunMajorityElement()
 }
