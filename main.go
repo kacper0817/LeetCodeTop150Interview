@@ -1,9 +1,9 @@
 package main
 
 import (
-	majorityelement "LeetCodeTop150Interview/ArrayString/MajorityElement"
+	mergesortedarray "LeetCodeTop150Interview/ArrayString/MergeSortedArray"
 )
 
 func main() {
-	majorityelement.RunMajorityElement()
+	mergesortedarray.RunMergeSortedArray()
 }
