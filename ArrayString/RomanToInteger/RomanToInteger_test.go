@@ -15,6 +15,10 @@ func TestRemoveElement(t *testing.T) {
 			expected: 3,
 		},
 		{
+			input:    "IV",
+			expected: 4,
+		},
+		{
 			input:    "LVIII",
 			expected: 58,
 		},
