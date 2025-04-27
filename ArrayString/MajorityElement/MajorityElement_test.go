@@ -25,7 +25,7 @@ func TestMerge(t *testing.T) {
 		t.Run(fmt.Sprintf("test %d", i), func(t *testing.T) {
 
 			majorityElement(tt.nums)
-			if !reflect.DeepEqual(tt.expected, tt.expected) {
+			if !reflect.DeepEqual(tt.nums, tt.expected) {
 				t.Errorf("value %v, expected %v", tt.nums, tt.expected)
 			}
 		})
