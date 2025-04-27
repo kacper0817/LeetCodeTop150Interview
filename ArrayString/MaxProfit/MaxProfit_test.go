@@ -1,7 +1,6 @@
 package maxprofit
 
 import (
-	"reflect"
 	"testing"
 )
 
@@ -26,7 +25,7 @@ func TestMerge(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			result := maxProfit(tt.nums)
-			if !reflect.DeepEqual(tt.nums, result) {
+			if result != tt.expected {
 				t.Errorf("value %v, expected %v", result, tt.expected)
 			}
 		})
