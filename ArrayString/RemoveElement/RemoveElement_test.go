@@ -7,46 +7,46 @@ import (
 
 func TestRemoveElement(t *testing.T) {
 	tests := []struct {
-		name     string
-		nums     []int
-		val      int
-		wantNums []int
-		wantLen  int
+		name         string
+		nums         []int
+		val          int
+		expectedNums []int
+		expectedLen  int
 	}{
 		{
-			name:     "remove existing element",
-			nums:     []int{3, 2, 2, 3},
-			val:      3,
-			wantNums: []int{2, 2},
-			wantLen:  2,
+			name:         "remove existing element",
+			nums:         []int{3, 2, 2, 3},
+			val:          3,
+			expectedNums: []int{2, 2},
+			expectedLen:  2,
 		},
 		{
-			name:     "no element to remove",
-			nums:     []int{1, 2, 3, 4},
-			val:      5,
-			wantNums: []int{1, 2, 3, 4},
-			wantLen:  4,
+			name:         "no element to remove",
+			nums:         []int{1, 2, 3, 4},
+			val:          5,
+			expectedNums: []int{1, 2, 3, 4},
+			expectedLen:  4,
 		},
 		{
-			name:     "remove all elements",
-			nums:     []int{2, 2, 2},
-			val:      2,
-			wantNums: []int{},
-			wantLen:  0,
+			name:         "remove all elements",
+			nums:         []int{2, 2, 2},
+			val:          2,
+			expectedNums: []int{},
+			expectedLen:  0,
 		},
 		{
-			name:     "empty array",
-			nums:     []int{},
-			val:      0,
-			wantNums: []int{},
-			wantLen:  0,
+			name:         "empty array",
+			nums:         []int{},
+			val:          0,
+			expectedNums: []int{},
+			expectedLen:  0,
 		},
 		{
-			name:     "mixed elements",
-			nums:     []int{0, 1, 2, 2, 3, 0, 4, 2},
-			val:      2,
-			wantNums: []int{0, 1, 3, 0, 4},
-			wantLen:  5,
+			name:         "mixed elements",
+			nums:         []int{0, 1, 2, 2, 3, 0, 4, 2},
+			val:          2,
+			expectedNums: []int{0, 1, 3, 0, 4},
+			expectedLen:  5,
 		},
 	}
 
@@ -54,12 +54,12 @@ func TestRemoveElement(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			gotLen := removeElement(tt.nums, tt.val)
 
-			if gotLen != tt.wantLen {
-				t.Errorf("removeElement() length = %d, want %d", gotLen, tt.wantLen)
+			if gotLen != tt.expectedLen {
+				t.Errorf("length = %d, expectedLen %d", gotLen, tt.expectedLen)
 			}
 
-			if !reflect.DeepEqual(tt.nums[:gotLen], tt.wantNums) {
-				t.Errorf("removeElement() nums = %v, want %v", tt.nums[:gotLen], tt.wantNums)
+			if !reflect.DeepEqual(tt.nums[:gotLen], tt.expectedNums) {
+				t.Errorf("value = %v, expected %v", tt.nums[:gotLen], tt.expectedNums)
 			}
 		})
 	}

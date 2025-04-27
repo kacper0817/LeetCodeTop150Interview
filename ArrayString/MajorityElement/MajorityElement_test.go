@@ -7,19 +7,19 @@ import (
 
 func TestMerge(t *testing.T) {
 	tests := []struct {
-		name string
-		nums []int
-		want int
+		name     string
+		nums     []int
+		expected int
 	}{
 		{
-			name: "basic example",
-			nums: []int{3, 2, 3},
-			want: 3,
+			name:     "basic example",
+			nums:     []int{3, 2, 3},
+			expected: 3,
 		},
 		{
-			name: "1 element nums",
-			nums: []int{2, 2, 1, 1, 1, 2, 2},
-			want: 2,
+			name:     "1 element nums",
+			nums:     []int{2, 2, 1, 1, 1, 2, 2},
+			expected: 2,
 		},
 	}
 
@@ -27,8 +27,8 @@ func TestMerge(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 
 			majorityElement(tt.nums)
-			if !reflect.DeepEqual(tt.want, tt.want) {
-				t.Errorf("majorityElement() = %v, want %v", tt.nums, tt.want)
+			if !reflect.DeepEqual(tt.expected, tt.expected) {
+				t.Errorf("value %v, expected %v", tt.nums, tt.expected)
 			}
 		})
 	}
