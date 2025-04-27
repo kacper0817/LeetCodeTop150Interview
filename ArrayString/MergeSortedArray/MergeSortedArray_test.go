@@ -52,7 +52,7 @@ func TestMerge(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			merge(tt.nums1, tt.m, tt.nums2, tt.n)
 			if !reflect.DeepEqual(tt.nums1, tt.expected) {
-				t.Errorf("value = %v, expected %v", tt.nums1, tt.expected)
+				t.Errorf("value %v, expected %v", tt.nums1, tt.expected)
 			}
 		})
 	}

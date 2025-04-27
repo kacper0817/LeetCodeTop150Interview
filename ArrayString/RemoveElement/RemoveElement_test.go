@@ -59,7 +59,7 @@ func TestRemoveElement(t *testing.T) {
 			}
 
 			if !reflect.DeepEqual(tt.nums[:gotLen], tt.expectedNums) {
-				t.Errorf("value = %v, expected %v", tt.nums[:gotLen], tt.expectedNums)
+				t.Errorf("value %v, expected %v", tt.nums[:gotLen], tt.expectedNums)
 			}
 		})
 	}
