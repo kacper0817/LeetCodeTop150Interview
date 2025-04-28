@@ -1,18 +1,16 @@
 package rotatearray
 
-import (
-	"slices"
-)
-
 func rotate(nums []int, k int) {
-	splitIndex := k + 1
-	splited := slices.Clone(nums[splitIndex:])
-
-	for i := splitIndex - 1; i >= 0; i-- {
-		nums[splitIndex+i-1] = nums[i]
+	if len(nums) <= 1 {
+		return
 	}
 
-	for i := range len(splited) {
-		nums[i] = splited[i]
+	shiftedNums := make([]int, len(nums))
+
+	for i := range nums {
+		newPosition := (i + k) % len(nums)
+		shiftedNums[newPosition] = nums[i]
 	}
+	copy(nums, shiftedNums)
+
 }
